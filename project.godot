@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="carrera"
-run/main_scene="res://spider.tscn"
+run/main_scene="res://map.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_height=960
+window/vsync/vsync_mode=2
 
 [input]
 

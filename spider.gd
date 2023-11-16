@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 var direccion= Vector2(0,0)
-const  maxV = 100
-const velocidadH = 50
-const velocidadV = 50
+@export var  maxV = 100
+@export var velocidadH = 50
+@export var velocidadV = 50
 
 @onready var sprite2D = $Sprite2D
 @onready var animationPlayer = $AnimationPlayer
@@ -12,7 +12,7 @@ func _ready():
 	var _sprite2D = $Sprite2D
 	var _animationPlayer = $AnimationPlayer
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	mover()
 	avanzar()
 	move_and_slide()
