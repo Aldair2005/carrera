@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c3mwpe33i5df8"]
+[gd_scene load_steps=13 format=3 uid="uid://c3mwpe33i5df8"]
 
 [ext_resource type="Script" path="res://spider.gd" id="1_dp8ly"]
 [ext_resource type="Texture2D" uid="uid://ckxsqt10oyc7u" path="res://sprites/IMG-20231110-WA0007.png" id="2_plg5t"]
@@ -28,7 +28,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_eoqgq"]
 resource_name = "adelante"
-length = 1.75
+length = 1.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -36,16 +36,33 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 5, 4, 3, 2, 1, 0]
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_iy35i"]
+resource_name = "retroceder"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 4, 3, 2, 1, 0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lxjao"]
 _data = {
 "RESET": SubResource("Animation_wx7vv"),
-"adelante": SubResource("Animation_eoqgq")
+"adelante": SubResource("Animation_eoqgq"),
+"retroceder": SubResource("Animation_iy35i")
 }
 
 [node name="Node2D" type="Node2D"]
@@ -65,8 +82,7 @@ position = Vector2(648, 535)
 shape = SubResource("RectangleShape2D_nvjv2")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(744, 74)
-rotation = 1.5708
+position = Vector2(578, 326)
 ignore_rotation = false
 rotation_smoothing_enabled = true
 
@@ -75,28 +91,52 @@ libraries = {
 "": SubResource("AnimationLibrary_lxjao")
 }
 
-[node name="derechaButton" type="TouchScreenButton" parent="CharacterBody2D"]
+[node name="Control1" type="Control" parent="CharacterBody2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="derechaButton" type="TouchScreenButton" parent="CharacterBody2D/Control1"]
 position = Vector2(961, 530)
 scale = Vector2(0.460784, 0.460784)
 texture_normal = ExtResource("3_tplmq")
 texture_pressed = ExtResource("7_hfg2p")
 action = "derechaButton"
 
-[node name="izquierdaButton" type="TouchScreenButton" parent="CharacterBody2D"]
+[node name="Control2" type="Control" parent="CharacterBody2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="izquierdaButton" type="TouchScreenButton" parent="CharacterBody2D/Control2"]
 position = Vector2(852, 529)
 scale = Vector2(0.460784, 0.460784)
 texture_normal = ExtResource("4_4u1ws")
 texture_pressed = ExtResource("4_4u1ws")
 action = "izquierdaButton"
 
-[node name="arribaButton" type="TouchScreenButton" parent="CharacterBody2D"]
+[node name="Control3" type="Control" parent="CharacterBody2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="arribaButton" type="TouchScreenButton" parent="CharacterBody2D/Control3"]
 position = Vector2(908, 475)
 scale = Vector2(0.460784, 0.456311)
 texture_normal = ExtResource("5_tyvdd")
 texture_pressed = ExtResource("5_tyvdd")
 action = "arribaButton"
 
-[node name="abajoButton" type="TouchScreenButton" parent="CharacterBody2D"]
+[node name="Control4" type="Control" parent="CharacterBody2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="abajoButton" type="TouchScreenButton" parent="CharacterBody2D/Control4"]
 position = Vector2(908, 529)
 scale = Vector2(0.460784, 0.460784)
 texture_normal = ExtResource("6_42fsi")

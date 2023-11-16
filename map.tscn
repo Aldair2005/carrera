@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2o3mmhikl5ii"]
+
+[ext_resource type="PackedScene" uid="uid://c3mwpe33i5df8" path="res://spider.tscn" id="1_t6kvh"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="Node2D" parent="TileMap" instance=ExtResource("1_t6kvh")]
