@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c3mwpe33i5df8"]
+[gd_scene load_steps=12 format=3 uid="uid://c3mwpe33i5df8"]
 
 [ext_resource type="Script" path="res://spider.gd" id="1_dp8ly"]
 [ext_resource type="Texture2D" uid="uid://ckxsqt10oyc7u" path="res://sprites/IMG-20231110-WA0007.png" id="2_plg5t"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://csrtgl0qeufk3" path="res://controles/izquierda .png" id="4_4u1ws"]
 [ext_resource type="Texture2D" uid="uid://dtpc7t5ln4pki" path="res://controles/arriba.png" id="5_tyvdd"]
 [ext_resource type="Texture2D" uid="uid://dycrr5grroh3o" path="res://controles/abajo.png" id="6_42fsi"]
-[ext_resource type="Texture2D" uid="uid://b7cu8rmkyqol1" path="res://controles/d.png" id="7_hfg2p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mtq5"]
 size = Vector2(52, 67)
@@ -65,24 +64,26 @@ _data = {
 "retroceder": SubResource("Animation_iy35i")
 }
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="spider" type="CharacterBody2D" groups=["spider"]]
 position = Vector2(-456, 28)
+motion_mode = 1
 script = ExtResource("1_dp8ly")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(652, 491.75)
+position = Vector2(545, 628.75)
 scale = Vector2(0.25, 0.258488)
 texture = ExtResource("2_plg5t")
 hframes = 2
 vframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(652, 492.5)
+position = Vector2(545, 629.5)
 shape = SubResource("RectangleShape2D_5mtq5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 326)
 ignore_rotation = false
+process_callback = 0
 rotation_smoothing_enabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -93,21 +94,25 @@ libraries = {
 [node name="Control1" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -219.0
+offset_top = 135.0
+offset_right = -179.0
+offset_bottom = 175.0
 
-[node name="derechaButton" type="TouchScreenButton" parent="Control1"]
-position = Vector2(961, 530)
+[node name="derechaButton" type="TouchScreenButton" parent="."]
+position = Vector2(742, 665)
 scale = Vector2(0.460784, 0.460784)
 texture_normal = ExtResource("3_tplmq")
-texture_pressed = ExtResource("7_hfg2p")
+texture_pressed = ExtResource("3_tplmq")
 action = "derechaButton"
 
 [node name="Control2" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -219.0
+offset_top = 135.0
+offset_right = -179.0
+offset_bottom = 175.0
 
 [node name="izquierdaButton" type="TouchScreenButton" parent="Control2"]
 position = Vector2(852, 529)
@@ -119,8 +124,10 @@ action = "izquierdaButton"
 [node name="Control3" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -219.0
+offset_top = 135.0
+offset_right = -179.0
+offset_bottom = 175.0
 
 [node name="arribaButton" type="TouchScreenButton" parent="Control3"]
 position = Vector2(908, 475)
@@ -132,8 +139,10 @@ action = "arribaButton"
 [node name="Control4" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -219.0
+offset_top = 135.0
+offset_right = -179.0
+offset_bottom = 175.0
 
 [node name="abajoButton" type="TouchScreenButton" parent="Control4"]
 position = Vector2(908, 529)
