@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://c3mwpe33i5df8"]
 
 [ext_resource type="Script" path="res://spider.gd" id="1_dp8ly"]
-[ext_resource type="Texture2D" uid="uid://ckxsqt10oyc7u" path="res://sprites/IMG-20231110-WA0007.png" id="2_plg5t"]
+[ext_resource type="Texture2D" uid="uid://c7fd2dnboy7hv" path="res://sprites/IMG-20231110-WA0007.png" id="2_plg5t"]
 [ext_resource type="Texture2D" uid="uid://dgm4cjwmyj3n6" path="res://controles/derecha.png" id="3_tplmq"]
 [ext_resource type="Texture2D" uid="uid://csrtgl0qeufk3" path="res://controles/izquierda .png" id="4_4u1ws"]
 [ext_resource type="Texture2D" uid="uid://dtpc7t5ln4pki" path="res://controles/arriba.png" id="5_tyvdd"]
@@ -27,7 +27,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_eoqgq"]
 resource_name = "adelante"
-length = 1.2
+length = 0.7
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -43,7 +43,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_iy35i"]
 resource_name = "retroceder"
-length = 1.2
+length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -66,6 +66,7 @@ _data = {
 
 [node name="spider" type="CharacterBody2D" groups=["spider"]]
 position = Vector2(-456, 28)
+collision_mask = 6
 motion_mode = 1
 script = ExtResource("1_dp8ly")
 
