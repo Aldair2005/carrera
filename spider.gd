@@ -1,6 +1,7 @@
-extends CharacterBody2D
+class_name spider extends CharacterBody2D
 
-
+signal killed
+signal gano
 
 @export var  maxV = 200
 
@@ -8,8 +9,8 @@ extends CharacterBody2D
 @onready var animationPlayer = $AnimationPlayer
 
 func _ready():
-	var _sprite2D = $Sprite2D
-	var _animationPlayer = $AnimationPlayer
+	var sprite2D = $Sprite2D
+	var animationPlayer = $AnimationPlayer
 
 func _physics_process(_delta):
 	var direccion= Vector2(Input.get_axis("izquierdaButton", "derechaButton"), 
@@ -37,3 +38,13 @@ func avanzar():
 		sprite2D.flip_h= false
 		animationPlayer.play("retroceder")
 	move_and_slide()
+	
+
+func die():
+	killed.emit()
+	queue_free()
+	
+func win():
+	gano.emit()
+	queue_free()
+

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmuo30exubdip"]
+
+[ext_resource type="Script" path="res://fin.gd" id="1_3gren"]
+[ext_resource type="Texture2D" uid="uid://b8nje3b73gu00" path="res://icon.svg" id="1_ccyop"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpxxe"]
+size = Vector2(125.578, 126.24)
+
+[node name="fin" type="Area2D"]
+collision_layer = 16
+script = ExtResource("1_3gren")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-94, -10630)
+scale = Vector2(5.36719, 4.54688)
+shape = SubResource("RectangleShape2D_kpxxe")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-88, -10627)
+scale = Vector2(5.36719, 4.54688)
+texture = ExtResource("1_ccyop")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

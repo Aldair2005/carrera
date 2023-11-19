@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccn104ike7u7i"]
+
+[ext_resource type="PackedScene" uid="uid://bl2krxye5pnb3" path="res://ladrillo.tscn" id="1_6f7fl"]
+[ext_resource type="Texture2D" uid="uid://ccnbi4vhi86cq" path="res://imagenes/ladrillo21.png" id="2_5on76"]
+
+[node name="ladrillo" instance=ExtResource("1_6f7fl")]
+position = Vector2(3, -1483)
+collision_layer = 4
+
+[node name="Sprite2D" parent="." index="0"]
+rotation = -0.837758
+texture = ExtResource("2_5on76")
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2(-0.803635, 0.273407)
+rotation = -0.837758
