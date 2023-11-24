@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://8ew8ynlslue4"]
 
 [ext_resource type="Script" path="res://gameover.gd" id="1_bdflb"]
-[ext_resource type="Texture2D" uid="uid://bsgd2p8m1gro8" path="res://imagenes/fin.png" id="2_tfule"]
+[ext_resource type="Texture2D" uid="uid://css5ptejxj88f" path="res://imagenes/derrota.png" id="2_n40wh"]
 
 [node name="gameover" type="Control"]
 layout_mode = 3
@@ -14,9 +14,9 @@ grow_vertical = 2
 script = ExtResource("1_bdflb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(270.5, 486.5)
+position = Vector2(287, 269)
 scale = Vector2(0.743056, 0.767685)
-texture = ExtResource("2_tfule")
+texture = ExtResource("2_n40wh")
 
 [node name="rsButton" type="Button" parent="Sprite2D"]
 anchors_preset = 8
@@ -24,13 +24,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -458.0
-offset_top = -496.0
-offset_right = -282.0
-offset_bottom = -378.0
+offset_left = -435.972
+offset_top = 48.168
+offset_right = -259.972
+offset_bottom = 166.168
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.23914, 0.651939)
+size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 25
 text = "reintentar"
 

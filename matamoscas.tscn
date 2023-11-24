@@ -1,0 +1,110 @@
+[gd_scene load_steps=6 format=3 uid="uid://lyxygqbrgksc"]
+
+[ext_resource type="Script" path="res://matamoscas.gd" id="1_1k6jt"]
+[ext_resource type="Texture2D" uid="uid://bc73p0clvq668" path="res://sprites/matamoscas.png" id="1_jhcjc"]
+
+[sub_resource type="Animation" id="Animation_na8e2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionPolygon2D:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [PackedVector2Array(-22, -436, 23, -439, 171, -398, 207, -364, 130, -187, 103, -174, 55, -187, -59, -223, -68, -244)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionPolygon2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-85, 94)]
+}
+
+[sub_resource type="Animation" id="Animation_6jmse"]
+resource_name = "matamosca"
+length = 3.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 2.5, 2.6, 2.7, 2.8, 2.9, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0, 0, 1, 2, 3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionPolygon2D:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [PackedVector2Array(-22, -436, 23, -439, 171, -398, 207, -364, 130, -187, 103, -174, 55, -187, -59, -223, -68, -244), PackedVector2Array(14, -412, 116, -515, 171, -527, 209, -310, 109, -263, 61, -206, 50, -151, 19, -142, -15, -166, -22, -254, -19, -330), PackedVector2Array(14, -412, 58, -480, 120, -522, 222, -321, 161, -277, 108, -215, 102, -170, 101, -119, 77, -109, -5, -219, -16, -329), PackedVector2Array(78, -341, 76, -465, 120, -522, 290, -400, 256, -305, 259, -215, 292, -158, 273, -143, 240, -139, 175, -186, 110, -239), PackedVector2Array(157, -363, 111, -453, 103, -526, 331, -502, 371, -355, 419, -316, 450, -293, 421, -246, 369, -242, 332, -253, 224, -295), PackedVector2Array(121, -339, 111, -453, 103, -526, 290, -616, 394, -516, 514, -505, 485, -436, 332, -373, 324, -334, 249, -305, 203, -307, 132, -279, 148, -335), PackedVector2Array(160, -369, 111, -453, 103, -526, 315, -517, 343, -435, 358, -402, 367, -370, 391, -338, 439, -306, 446, -276, 348, -258, 237, -290, 207, -317), PackedVector2Array(83, -348, 88, -463, 111, -533, 285, -420, 290, -377, 269, -315, 264, -225, 298, -172, 293, -140, 228, -144, 205, -172, 150, -221, 104, -279), PackedVector2Array(-12, -411, 81, -523, 111, -533, 201, -343, 187, -324, 148, -289, 125, -269, 108, -235, 86, -202, 84, -134, 55, -122, 5, -179, -31, -262), PackedVector2Array(19, -347, 51, -414, 148, -502, 200, -530, 243, -331, 237, -297, 141, -250, 115, -231, 94, -205, 84, -134, 55, -122, 5, -179, 5, -288), PackedVector2Array(19, -347, 34, -460, 54, -499, 142, -494, 272, -446, 280, -411, 207, -235, 115, -231, 5, -288), PackedVector2Array(19, -347, 34, -460, 54, -499, 142, -494, 272, -446, 280, -411, 207, -235, 115, -231, 5, -288), PackedVector2Array(19, -347, 34, -460, 54, -499, 142, -494, 272, -446, 280, -411, 207, -235, 115, -231, 5, -288), PackedVector2Array(19, -347, 34, -460, 54, -499, 142, -494, 272, -446, 280, -411, 207, -235, 115, -231, 5, -288), PackedVector2Array(19, -347, 34, -460, 54, -499, 142, -494, 272, -446, 280, -411, 207, -235, 115, -231, 5, -288), PackedVector2Array(77, -429, 153, -559, 261, -627, 298, -555, 316, -437, 295, -399, 223, -361, 179, -320, 150, -235, 115, -231, 80, -271), PackedVector2Array(126, -419, 145, -495, 187, -570, 261, -627, 356, -453, 349, -411, 297, -377, 257, -328, 246, -272, 239, -220, 193, -222, 145, -309), PackedVector2Array(219, -400, 213, -457, 220, -592, 261, -627, 423, -508, 422, -471, 399, -404, 399, -322, 426, -267, 411, -243, 325, -275, 259, -348), PackedVector2Array(282, -491, 256, -549, 243, -604, 261, -627, 460, -610, 486, -586, 484, -528, 541, -429, 596, -398, 541, -347, 417, -374, 329, -433), PackedVector2Array(259, -507, 232, -536, 241, -592, 261, -627, 434, -704, 459, -689, 520, -626, 575, -596, 647, -598, 654, -563, 535, -480, 469, -466, 474, -426, 386, -402, 283, -371, 250, -436), PackedVector2Array(259, -507, 232, -536, 241, -592, 261, -627, 434, -704, 459, -689, 520, -626, 575, -596, 647, -598, 654, -563, 535, -480, 469, -466, 474, -426, 386, -402, 283, -371, 250, -436)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionPolygon2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(8, 0), Vector2(-85, 94), Vector2(-140, 42), Vector2(-326, 186), Vector2(-468, 330), Vector2(-490, 549), Vector2(-457, 344), Vector2(-336, 191), Vector2(-138, 47), Vector2(-125, 81), Vector2(-67, 57), Vector2(-67, 57), Vector2(-67, 57), Vector2(-67, 57), Vector2(-67, 57), Vector2(-191, 186), Vector2(-287, 135), Vector2(-464, 292), Vector2(-612, 443), Vector2(-631, 633), Vector2(-631, 633)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yq0xx"]
+_data = {
+"RESET": SubResource("Animation_na8e2"),
+"matamosca": SubResource("Animation_6jmse")
+}
+
+[node name="matamosca" type="Area2D"]
+collision_layer = 64
+script = ExtResource("1_1k6jt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, -3)
+texture = ExtResource("1_jhcjc")
+hframes = 6
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yq0xx")
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-85, 94)
+polygon = PackedVector2Array(-22, -436, 23, -439, 171, -398, 207, -364, 130, -187, 103, -174, 55, -187, -59, -223, -68, -244)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

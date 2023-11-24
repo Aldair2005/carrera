@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgcddtuhs5rbu"]
+
+[ext_resource type="Script" path="res://controles_t.gd" id="1_awhuj"]
+[ext_resource type="Texture2D" uid="uid://dgm4cjwmyj3n6" path="res://controles/derecha.png" id="1_b6w2l"]
+[ext_resource type="Texture2D" uid="uid://csrtgl0qeufk3" path="res://controles/izquierda .png" id="2_yerrs"]
+[ext_resource type="Texture2D" uid="uid://dtpc7t5ln4pki" path="res://controles/arriba.png" id="3_kcu04"]
+[ext_resource type="Texture2D" uid="uid://dycrr5grroh3o" path="res://controles/abajo.png" id="4_xmlm0"]
+
+[node name="ControlesT" type="Node2D"]
+position = Vector2(-544, -65)
+script = ExtResource("1_awhuj")
+
+[node name="izquierdaButton" type="TouchScreenButton" parent="."]
+position = Vector2(543, 803)
+scale = Vector2(0.460784, 0.460784)
+texture_normal = ExtResource("2_yerrs")
+texture_pressed = ExtResource("2_yerrs")
+action = "izquierdaButton"
+
+[node name="arribaButton" type="TouchScreenButton" parent="."]
+position = Vector2(599, 749)
+scale = Vector2(0.460784, 0.456311)
+texture_normal = ExtResource("3_kcu04")
+texture_pressed = ExtResource("3_kcu04")
+action = "arribaButton"
+
+[node name="abajoButton" type="TouchScreenButton" parent="."]
+position = Vector2(599, 803)
+scale = Vector2(0.460784, 0.460784)
+texture_normal = ExtResource("4_xmlm0")
+texture_pressed = ExtResource("4_xmlm0")
+action = "abajoButton"
+
+[node name="derechaButton" type="TouchScreenButton" parent="."]
+position = Vector2(652, 804)
+scale = Vector2(0.460784, 0.460784)
+texture_normal = ExtResource("1_b6w2l")
+texture_pressed = ExtResource("1_b6w2l")
+action = "derechaButton"
+visibility_mode = 1

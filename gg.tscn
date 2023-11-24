@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://6cny7m01crjb"]
 
 [ext_resource type="Script" path="res://gg.gd" id="1_fmom7"]
-[ext_resource type="Texture2D" uid="uid://dusyryt2cvas5" path="res://imagenes/GG.png" id="1_t4n12"]
+[ext_resource type="Texture2D" uid="uid://j8uy2hcik1hf" path="res://imagenes/victoria.jpeg" id="2_ifdwm"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -13,9 +13,9 @@ grow_vertical = 2
 script = ExtResource("1_fmom7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(271, 475.75)
-scale = Vector2(0.356, 0.457857)
-texture = ExtResource("1_t4n12")
+position = Vector2(271, 516.5)
+scale = Vector2(0.819423, 1.15914)
+texture = ExtResource("2_ifdwm")
 region_rect = Rect2(0, 0, 540, 960)
 
 [node name="restartButton" type="Button" parent="Sprite2D"]
@@ -24,10 +24,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -983.0
-offset_top = -1054.0
-offset_right = -506.0
-offset_bottom = -990.0
+offset_left = -558.93
+offset_top = -419.276
+offset_right = -81.9297
+offset_bottom = -355.276
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 29
